@@ -1,5 +1,10 @@
-A roku screen saver that uses random, featured images from [unsplash](https://unsplash.com/) and weather from [openweathermap](https://openweathermap.org/). It uses [ipstack](https://ipstack.com/) to get the location of the roku. 
-The weather and background image update every 30 minutes.
+# L-N Roku Screensaver
+A screensaver for the L-Ns to show personal pictures and more.
 
+This is heavily based on: https://github.com/briangzimmerman/unsplash_roku_screensaver and leverages:
+* [unsplash](https://unsplash.com/)
+* [openweathermap](https://openweathermap.org/)
+* [ipstack](https://ipstack.com/)
 
-![](https://github.com/briangzimmerman/unsplash_roku_screensaver/blob/master/images/roku_screenshot.jpg)
+## Configuration
+Copy the config.json.template to config.json and fill in the API keys as required.

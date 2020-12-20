@@ -2,6 +2,10 @@
 <component name="UnsplashScreensaver" extends="Scene" >
     <script type="text/brightscript" uri = "pkg:/components/UnsplashScreensaver.brs"/>
 
+    <interface>
+        <field id="keyPress" type="assocarray" />
+    </interface>
+
     <children>
 
         <Poster

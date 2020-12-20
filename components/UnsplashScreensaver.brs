@@ -1,3 +1,4 @@
+
 Function init()
     m.top.backgroundColor = "0x662d91FF" '#662d91
     m.top.backgroundURI = ""
@@ -6,6 +7,7 @@ Function init()
     m.DateLabel = m.top.findNode("date_label")
     m.TimeLabel = m.top.findNode("time_label")
     m.Background = m.top.findNode("background")
+    m.Background.setFocus(true)
 
     m.global.observeField("Weather", "updateWeather")
     m.global.observeField("BackgroundUri", "updateBackground")
@@ -13,7 +15,22 @@ Function init()
     m.Timer = m.top.findNode("secondTimer")
     m.Timer.control = "start"
     m.Timer.ObserveField("fire", "updateDate")
+
+    m.top.setFocus(true) ' Set focus so we can capture events
+
 end Function
+
+function onKeyEvent(key as String, press as Boolean) as Boolean
+    'print "Keyboard Event " + key
+    if( press )
+        payload = { "type": "keyPress", "key": key, "press": "true"}
+        m.top.setField("keyPress", payload)
+    else
+        payload = { "type": "keyPress", "key": key, "press": "false" }
+        m.top.setField("keyPress", payload)       
+    end if
+    return true
+end function
 
 'Date/Time functions
 Function getDay()
