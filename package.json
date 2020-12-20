@@ -1,0 +1,26 @@
+{
+  "ropm": {
+    "rootDir": "./"
+  },
+  "name": "ln_roku_screensaver",
+  "description": "A screensaver for the L-Ns to show personal pictures and more.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newbeb/ln_roku_screensaver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newbeb/ln_roku_screensaver/issues"
+  },
+  "homepage": "https://github.com/newbeb/ln_roku_screensaver#readme",
+  "dependencies": {
+    "if": "npm:roku-image-fader@^0.1.0"
+  }
+}

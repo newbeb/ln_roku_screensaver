@@ -8,21 +8,14 @@
 
     <children>
 
-        <Poster
+        <!-- Fades between 2 posters: https://github.com/rokucommunity/roku-image-fader -->
+        <if_ImageFader
             id="background"
-            loadDisplayMode="scaleToZoom"
+            scaleMode="scaleToZoom"
+            ShadeOpacity="0.42"
             translation='[0,0]'
             width='1920'
-            height='1080'
-        />
-
-        <!-- Overlay -->
-        <Rectangle
-            width="1920"
-            height="1080"
-            translation='[0,0]'
-            color="0x0000004C"
-        />
+            height='1080'/>
 
         <!-- Temperature Label -->
         <SimpleLabel
@@ -48,6 +41,7 @@
             fontUri="pkg:/fonts/raleway/Raleway-Regular.ttf"
             fontSize="95"
         />
+        
             <!-- fontUri="font:SystemFontFile" -->
 
         <Timer

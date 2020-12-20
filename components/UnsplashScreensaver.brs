@@ -7,7 +7,7 @@ Function init()
     m.DateLabel = m.top.findNode("date_label")
     m.TimeLabel = m.top.findNode("time_label")
     m.Background = m.top.findNode("background")
-    m.Background.setFocus(true)
+    ' m.Background.setFocus(true)
 
     m.global.observeField("Weather", "updateWeather")
     m.global.observeField("BackgroundUri", "updateBackground")
@@ -110,6 +110,6 @@ end Function
 'Background functions
 Function updateBackground()
     if(m.global.BackgroundUri <> invalId)
-        m.Background.uri = m.global.BackgroundUri
+        m.Background.callFunc("changeImage", m.global.BackgroundUri)
     end if
 end Function
