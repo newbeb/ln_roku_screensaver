@@ -6,6 +6,8 @@ sub main()
     m.config = ReadAsciiFile("pkg:/config.json")
     m.config = ParseJSON(m.config)
 
+    m.pendingXfers = {}
+
     screen = createObject("roSGScreen") 'Creates screen to display screensaver
 
     port = createObject("roMessagePort") 'Port to listen to events on screen
@@ -27,6 +29,9 @@ sub main()
     m.BackgroundUris = CreateObject("roList")
     m.global.BackgroundUri = getBackground()
     m.global.Weather = getWeather()
+
+    print initializeDeviceAuthorizationConfig()
+    print requestDeviceAuthorization(m.config.google)
 
     'counter = 0
     weatherCounter = 0
